@@ -1,0 +1,1210 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>아기랑 준비물</title>
+<meta name="description" content="월령별 육아용품 추천, 육아 기록, 예방접종 일정, 성장 기록">
+<meta name="theme-color" content="#fbf7f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1715" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="아기랑">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --bg: #fbf7f3;
+    --surface: #ffffff;
+    --surface-2: #f6f1ec;
+    --ink: #2f2a27;
+    --muted: #8b817a;
+    --line: #eee5dd;
+    --accent: #ef7b5c;
+    --accent-ink: #c2563a;
+    --accent-soft: #fdece5;
+    --mint: #4fb394;
+    --mint-ink: #2a7a62;
+    --mint-soft: #e3f4ee;
+    --sky: #5b9bd8;
+    --sky-ink: #346fa8;
+    --sky-soft: #e7f1fb;
+    --gold-ink: #8f6b1f;
+    --gold-soft: #f8f0dc;
+    --lav-ink: #7a5fb0;
+    --lav-soft: #efeafa;
+    --shadow: 0 1px 2px rgba(70, 45, 30, .04), 0 6px 20px rgba(70, 45, 30, .06);
+    --radius: 20px;
+    --radius-sm: 12px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1715; --surface: #24201d; --surface-2: #2f2a27; --ink: #f3ece6; --muted: #a99e96; --line: #3a3431;
+      --accent: #f28d71; --accent-ink: #f7a68f; --accent-soft: #3d2a23;
+      --mint: #5cc3a3; --mint-ink: #8fdcc3; --mint-soft: #1d3530;
+      --sky: #6aa8e0; --sky-ink: #9cc7ef; --sky-soft: #1e2d3c;
+      --gold-ink: #e3c27a; --gold-soft: #3a3122; --lav-ink: #c4b0f0; --lav-soft: #2e2840;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1715; --surface: #24201d; --surface-2: #2f2a27; --ink: #f3ece6; --muted: #a99e96; --line: #3a3431;
+    --accent: #f28d71; --accent-ink: #f7a68f; --accent-soft: #3d2a23;
+    --mint: #5cc3a3; --mint-ink: #8fdcc3; --mint-soft: #1d3530;
+    --sky: #6aa8e0; --sky-ink: #9cc7ef; --sky-soft: #1e2d3c;
+    --gold-ink: #e3c27a; --gold-soft: #3a3122; --lav-ink: #c4b0f0; --lav-soft: #2e2840;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  [hidden] { display: none !important; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+    line-height: 1.55; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 560px; margin: 0 auto; padding: 16px 16px 112px; }
+
+  /* ---------- 헤더 ---------- */
+  .hero {
+    background: linear-gradient(135deg, var(--accent-soft) 0%, var(--lav-soft) 55%, var(--sky-soft) 100%);
+    border-radius: 24px; padding: 20px 18px 18px; margin-bottom: 20px; box-shadow: var(--shadow);
+  }
+  .hero-top { display: flex; align-items: center; gap: 12px; }
+  .logo { width: 48px; height: 48px; border-radius: 16px; background: var(--surface); display: grid; place-items: center; font-size: 26px; box-shadow: var(--shadow); flex-shrink: 0; }
+  .hero h1 { font-size: 21px; font-weight: 800; margin: 0; letter-spacing: -0.03em; }
+  .hero-sub { margin: 0; color: var(--muted); font-size: 13px; }
+  .profile { margin-top: 16px; background: var(--surface); border-radius: 16px; padding: 12px; display: grid; gap: 10px; }
+  .profile-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .field { display: grid; gap: 4px; }
+  .field span { font-size: 11px; font-weight: 600; color: var(--muted); padding-left: 2px; }
+  #ageLine { font-size: 13px; color: var(--muted); }
+
+  /* ---------- 공통 ---------- */
+  .card { background: var(--surface); border-radius: var(--radius); padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow); }
+  .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .small { font-size: 13px; color: var(--muted); }
+  input[type=date], input[type=text], input[type=number], select, textarea {
+    font: inherit; font-size: 15px; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: var(--radius-sm);
+    background: var(--surface); color: var(--ink); width: 100%; min-width: 0; transition: border-color .15s;
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); }
+  textarea { min-height: 70px; font-size: 12px; }
+  button, .btn {
+    font: inherit; font-size: 15px; border: 0; border-radius: var(--radius-sm); padding: 10px 16px; cursor: pointer;
+    background: var(--accent); color: #fff; font-weight: 700; transition: transform .1s, filter .15s; display: inline-flex; align-items: center; gap: 6px; justify-content: center;
+  }
+  button:active, .btn:active { transform: scale(.97); }
+  button:hover, .btn:hover { filter: brightness(1.03); }
+  button.ghost { background: var(--accent-soft); color: var(--accent-ink); }
+  button.plain, .btn.plain { background: var(--surface-2); color: var(--ink); font-weight: 600; }
+  .age-badge { display: inline-block; background: var(--mint-soft); color: var(--mint-ink); font-weight: 800; padding: 3px 10px; border-radius: 999px; font-size: 13px; margin-right: 4px; }
+
+  h2 { font-size: 18px; font-weight: 800; margin: 28px 4px 12px; letter-spacing: -0.03em; }
+  h3 { font-size: 15px; font-weight: 800; margin: 0 0 10px; letter-spacing: -0.02em; }
+  .note { font-size: 12px; color: var(--muted); margin: 10px 2px 0; line-height: 1.6; }
+  .empty { color: var(--muted); font-size: 14px; text-align: center; padding: 22px; background: var(--surface); border-radius: var(--radius); border: 1.5px dashed var(--line); }
+  .card .empty { border: 0; padding: 14px; }
+  a.ext { color: var(--sky-ink); font-weight: 700; text-decoration: none; }
+
+  /* ---------- 하단 탭 ---------- */
+  nav.tabs {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; justify-content: center;
+    background: color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom);
+  }
+  nav.tabs .inner { display: flex; max-width: 560px; width: 100%; padding: 6px 6px 8px; }
+  nav.tabs button { flex: 1; background: none; color: var(--muted); padding: 4px 2px; font-size: 11px; font-weight: 700; flex-direction: column; gap: 2px; border-radius: 14px; }
+  nav.tabs button .ico { font-size: 20px; width: 48px; height: 30px; display: grid; place-items: center; border-radius: 999px; transition: background .2s; filter: grayscale(.6); opacity: .8; }
+  nav.tabs button.on { color: var(--accent-ink); }
+  nav.tabs button.on .ico { background: var(--accent-soft); filter: none; opacity: 1; }
+
+  section.tab { display: none; animation: fade .25s ease; }
+  section.tab.on { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+  /* ---------- 칩 / 세그먼트 ---------- */
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  .chip { background: var(--surface); color: var(--muted); padding: 7px 14px; border-radius: 999px; font-size: 13px; font-weight: 700; box-shadow: inset 0 0 0 1.5px var(--line); }
+  .chip.on { background: var(--ink); color: var(--bg); box-shadow: none; }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; background: var(--surface-2); padding: 4px; border-radius: 14px; gap: 4px; margin-bottom: 14px; }
+  .seg .chip { box-shadow: none; background: transparent; padding: 9px; border-radius: 10px; font-size: 14px; }
+  .seg .chip.on { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+
+  /* ---------- 품목 카드 ---------- */
+  .item { display: grid; grid-template-columns: 48px 1fr; gap: 12px; position: relative; }
+  .item .emoji { font-size: 26px; width: 48px; height: 48px; display: grid; place-items: center; background: var(--surface-2); border-radius: 14px; }
+  .item .body { min-width: 0; padding-right: 72px; }
+  .item .name { font-weight: 800; font-size: 16px; letter-spacing: -0.02em; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+  .tag { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; white-space: nowrap; }
+  .tag.must { background: var(--accent-soft); color: var(--accent-ink); }
+  .tag.opt { background: var(--surface-2); color: var(--muted); }
+  .tag.rent { background: var(--sky-soft); color: var(--sky-ink); }
+  .tag.price { background: var(--gold-soft); color: var(--gold-ink); }
+  .tag.when { background: var(--lav-soft); color: var(--lav-ink); }
+  .item .why { font-size: 14px; margin-top: 8px; }
+  .item .tip { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .check-btn { position: absolute; top: 14px; right: 14px; padding: 6px 11px; font-size: 12px; border-radius: 999px; }
+  .check-btn.done { background: var(--mint); color: #fff; }
+
+  .brands { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); margin-right: -72px; }
+  .brands-label { font-size: 11px; color: var(--muted); font-weight: 600; margin-right: 2px; }
+  .brand { font-size: 12px; padding: 4px 10px; border-radius: 999px; background: var(--surface-2); color: var(--ink); text-decoration: none; font-weight: 600; transition: background .15s, color .15s; }
+  .brand:hover { background: var(--mint); color: #fff; }
+
+  .cb-row { display: flex; gap: 10px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line); }
+  .cb-row:first-child { border-top: 0; padding-top: 0; }
+  .cb-row:last-child { padding-bottom: 0; }
+  .cb-row .cb-name { font-weight: 800; }
+  .cb-row .cb-from { font-size: 11px; color: var(--muted); background: var(--surface-2); padding: 1px 7px; border-radius: 6px; margin-left: 6px; font-weight: 600; }
+  .cb-row .cb-desc { font-size: 13px; color: var(--muted); }
+  .cb-row a { margin-left: auto; flex-shrink: 0; }
+  .tip-row { font-size: 14px; }
+
+  /* 다음 할 일 */
+  .todo-card { background: linear-gradient(135deg, var(--surface) 60%, var(--accent-soft)); }
+  .todo { display: flex; gap: 10px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  .todo:first-of-type { border-top: 0; padding-top: 0; }
+  .todo:last-child { padding-bottom: 0; }
+  .todo .d { margin-left: auto; font-weight: 800; color: var(--accent-ink); white-space: nowrap; background: var(--accent-soft); padding: 2px 10px; border-radius: 999px; font-size: 13px; }
+
+  /* ---------- 체크리스트 ---------- */
+  .progress { height: 10px; background: var(--surface-2); border-radius: 999px; overflow: hidden; margin: 10px 0 6px; }
+  .progress > div { height: 100%; background: linear-gradient(90deg, var(--mint), #7fd0b6); border-radius: 999px; transition: width .4s; }
+  .progress.over > div { background: var(--accent); }
+  .big-num { font-size: 26px; font-weight: 800; letter-spacing: -0.03em; }
+  .cl-row { display: flex; align-items: center; gap: 6px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; flex-wrap: wrap; }
+  .card h3 + .cl-row { border-top: 0; padding-top: 0; }
+  .cl-row label { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 160px; cursor: pointer; }
+  .cl-row input[type=checkbox] { width: 22px; height: 22px; accent-color: var(--mint); flex-shrink: 0; }
+  .cl-row.done label span { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--line); }
+  .cl-row .price-in { width: 96px; padding: 6px 8px; font-size: 13px; text-align: right; }
+  .vote { background: var(--surface-2); color: var(--muted); padding: 6px 8px; font-size: 14px; border-radius: 10px; }
+  .vote.on { background: var(--accent-soft); }
+
+  /* ---------- 기록 ---------- */
+  .log-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .log-grid button { color: var(--ink); padding: 14px 4px 12px; font-size: 13px; font-weight: 700; flex-direction: column; gap: 4px; border-radius: 16px; }
+  .log-grid button .ico { font-size: 26px; }
+  [data-log=breastL], [data-log=breastR] { background: var(--accent-soft); }
+  [data-log=formula] { background: var(--gold-soft); }
+  [data-log=pee] { background: var(--sky-soft); }
+  [data-log=poo] { background: var(--surface-2); }
+  [data-log=sleep] { background: var(--lav-soft); }
+  .log-grid button.sleeping { background: var(--sky); color: #fff; animation: pulse 2s infinite; }
+  @keyframes pulse { 50% { filter: brightness(1.1); } }
+  .ml-row { display: flex; align-items: center; gap: 8px; margin-top: 12px; padding: 10px 12px; background: var(--surface-2); border-radius: var(--radius-sm); }
+  .ml-row input { width: 90px; padding: 6px 10px; }
+  .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .stat { border-radius: 16px; padding: 12px 14px; }
+  .stat:nth-child(1) { background: var(--accent-soft); }
+  .stat:nth-child(2) { background: var(--lav-soft); }
+  .stat:nth-child(3) { background: var(--gold-soft); }
+  .stat:nth-child(4) { background: var(--sky-soft); }
+  .stat .k { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .stat .v { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; }
+  .stat .v small { font-size: 12px; font-weight: 600; color: var(--muted); }
+  .stats-card { padding: 10px; }
+  .tl { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  .tl:first-child { border-top: 0; }
+  .tl .time { width: 48px; color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 600; }
+  .tl .x { margin-left: auto; background: none; color: var(--muted); padding: 2px 8px; font-weight: 400; }
+
+  /* ---------- 건강 ---------- */
+  .vx { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; cursor: pointer; }
+  .vx:first-of-type { border-top: 0; }
+  .vx input { width: 20px; height: 20px; accent-color: var(--mint); flex-shrink: 0; }
+  .vx .nm { font-weight: 600; }
+  .vx .when { margin-left: auto; font-size: 12px; color: var(--muted); text-align: right; white-space: nowrap; line-height: 1.4; }
+  .vx.done .nm { color: var(--muted); text-decoration: line-through; font-weight: 400; }
+  .vx.due .when { color: var(--accent-ink); font-weight: 700; }
+  .chart { width: 100%; height: auto; display: block; background: var(--surface-2); border-radius: 14px; margin-bottom: 8px; }
+  .grow-form { display: grid; grid-template-columns: 1.3fr 1fr 1fr auto; gap: 6px; }
+  .grow-form input { padding: 8px; font-size: 14px; }
+
+  /* ---------- 사이즈 가이드 ---------- */
+  .size-hero { display: flex; gap: 8px; }
+  .size-pill { flex: 1; background: var(--accent-soft); border-radius: 14px; padding: 10px 12px; }
+  .size-pill .k { font-size: 11px; color: var(--muted); font-weight: 600; }
+  .size-pill .v { font-size: 22px; font-weight: 800; color: var(--accent-ink); }
+  table.size { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
+  table.size th { font-size: 11px; color: var(--muted); font-weight: 600; padding: 6px 4px; }
+  table.size td { padding: 7px 4px; border-top: 1px solid var(--line); text-align: center; }
+  table.size tr.hit td { background: var(--accent-soft); font-weight: 800; color: var(--accent-ink); }
+  table.size tr.hit td:first-child { border-radius: 8px 0 0 8px; }
+  table.size tr.hit td:last-child { border-radius: 0 8px 8px 0; }
+
+  /* ---------- 아이콘 ---------- */
+  .ic { width: 1.15em; height: 1.15em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: -0.22em; flex-shrink: 0; }
+  h2 > .ic, h3 > .ic { color: var(--accent); }
+  .note .ic { width: 1.1em; height: 1.1em; }
+  .t-accent { background: var(--accent-soft); color: var(--accent-ink); }
+  .t-mint { background: var(--mint-soft); color: var(--mint-ink); }
+  .t-sky { background: var(--sky-soft); color: var(--sky-ink); }
+  .t-gold { background: var(--gold-soft); color: var(--gold-ink); }
+  .t-lav { background: var(--lav-soft); color: var(--lav-ink); }
+  .item .emoji .ic { width: 26px; height: 26px; vertical-align: 0; stroke-width: 1.6; }
+  .item .tip .ic { color: var(--gold-ink); }
+  .cl-ic { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; flex-shrink: 0; }
+  .cl-ic .ic { width: 18px; height: 18px; vertical-align: 0; }
+  nav.tabs button .ico .ic { width: 22px; height: 22px; vertical-align: 0; }
+  nav.tabs button .ico { filter: none; }
+  .log-grid button .ico .ic { width: 28px; height: 28px; vertical-align: 0; stroke-width: 1.6; }
+  [data-log=breastL], [data-log=breastR] { color: var(--accent-ink); }
+  [data-log=formula] { color: var(--gold-ink); }
+  [data-log=pee] { color: var(--sky-ink); }
+  [data-log=sleep] { color: var(--lav-ink); }
+  .log-grid button.sleeping .ic { color: #fff; }
+  .tl-ic { width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; flex-shrink: 0; background: var(--surface-2); }
+  .tl-ic .ic { width: 16px; height: 16px; vertical-align: 0; }
+  .tl-breastL, .tl-breastR { background: var(--accent-soft); color: var(--accent-ink); }
+  .tl-formula { background: var(--gold-soft); color: var(--gold-ink); }
+  .tl-pee { background: var(--sky-soft); color: var(--sky-ink); }
+  .tl-sleep { background: var(--lav-soft); color: var(--lav-ink); }
+  .todo > .ic { color: var(--accent); }
+  .vote .ic { width: 16px; height: 16px; vertical-align: -0.15em; }
+  .vote.on { color: var(--accent-ink); }
+  .seg .chip { display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+  .tip-row { align-items: flex-start; font-size: 14px; }
+  .tip-ic { width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; background: var(--gold-soft); color: var(--gold-ink); flex-shrink: 0; }
+  .tip-ic .ic { width: 18px; height: 18px; vertical-align: 0; }
+  .pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill { display: inline-flex; align-items: center; gap: 5px; background: var(--surface-2); padding: 5px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+  .rv-up > .ic { color: var(--mint); }
+  .rv-down > .ic { color: var(--muted); }
+
+  /* ---------- 프로필 사진 ---------- */
+  .profile { grid-template-columns: auto 1fr; align-items: center; gap: 14px; }
+  .profile-main { display: grid; gap: 8px; min-width: 0; }
+  .avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .avatar {
+    width: 84px; height: 84px; border-radius: 50%; position: relative; cursor: pointer; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--accent-soft), var(--lav-soft));
+    box-shadow: 0 0 0 3px var(--surface), 0 0 0 5px var(--accent-soft);
+  }
+  .avatar { flex-shrink: 0; }
+  .avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  .avatar-empty { display: grid; place-items: center; color: var(--accent); }
+  .avatar-empty .ic { width: 40px; height: 40px; stroke-width: 1.5; vertical-align: 0; }
+  .avatar-badge {
+    position: absolute; right: -2px; bottom: -2px; width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent); color: #fff; display: grid; place-items: center; box-shadow: 0 0 0 3px var(--surface);
+  }
+  .avatar-badge .ic { width: 15px; height: 15px; vertical-align: 0; stroke-width: 2; }
+  .avatar:hover .avatar-badge { filter: brightness(1.05); }
+  .avatar-del { background: none; color: var(--muted); font-size: 11px; padding: 4px 6px; font-weight: 600; }
+
+  @media (max-width: 460px) {
+    .profile-fields { grid-template-columns: 1fr; }
+    .avatar { width: 72px; height: 72px; }
+  }
+  @media (max-width: 380px) {
+    .grow-form { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <h1>아기랑 준비물</h1>
+        <p class="hero-sub">육아용품 추천 · 육아 기록 · 건강 관리를 한 곳에서</p>
+      </div>
+    </div>
+    <div class="profile">
+      <div class="avatar-wrap">
+        <label class="avatar" id="avatar" title="아기 사진 넣기">
+          <img id="avatarImg" alt="아기 프로필 사진" hidden>
+          <span class="avatar-empty" id="avatarEmpty"><i data-ic="baby"></i></span>
+          <span class="avatar-badge"><i data-ic="camera"></i></span>
+          <input type="file" id="avatarFile" accept="image/*" hidden>
+        </label>
+        <button class="avatar-del" id="avatarDel" hidden>사진 지우기</button>
+      </div>
+      <div class="profile-main">
+        <div class="profile-fields">
+          <label class="field"><span>생일 · 출산 예정일</span><input type="date" id="birth"></label>
+          <label class="field"><span>아기 이름</span><input type="text" id="babyName" placeholder="선택"></label>
+        </div>
+        <div id="ageLine"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== 추천 ===== -->
+  <section class="tab on" id="tab-rec">
+    <div class="card todo-card" id="todoCard" hidden>
+      <h3><i data-ic="bell"></i> 다음 할 일</h3>
+      <div id="todoList"></div>
+    </div>
+
+    <div class="seg" id="modeChips">
+      <button class="chip on" data-f="baby"><i data-ic="heart"></i> 우리 아기</button>
+      <button class="chip" data-f="gift"><i data-ic="gift"></i> 선물 고르기</button>
+    </div>
+
+    <div id="babyMode">
+      <div class="chips" id="recFilter">
+        <button class="chip on" data-f="all">전체</button>
+        <button class="chip" data-f="must">필수만</button>
+      </div>
+      <h2 id="nowTitle">지금 필요한 것</h2>
+      <div id="nowList"></div>
+      <h2>곧 필요해요 <span class="small" style="font-weight:400">(앞으로 3개월)</span></h2>
+      <div id="soonList"></div>
+      <h2 id="seasonTitle">이번 계절에 필요한 것</h2>
+      <div id="seasonList"></div>
+      <h2><i data-ic="chat"></i> 선배 부모들이 자주 하는 이야기</h2>
+      <div class="card" id="tipsList"></div>
+    </div>
+
+    <div id="giftMode" hidden>
+      <div class="card">
+        <h3><i data-ic="gift"></i> 선물 추천</h3>
+        <div class="row" style="flex-wrap:nowrap">
+          <select id="giftAge"></select>
+          <select id="giftBudget">
+            <option value="1">3만원 이하</option>
+            <option value="2" selected>10만원 이하</option>
+            <option value="3">10만원 이상도 OK</option>
+          </select>
+        </div>
+        <p class="note">받는 아기의 월령과 예산을 고르면, 지금 또는 곧 쓸 수 있는 물건을 추천해요.</p>
+      </div>
+      <div id="giftList"></div>
+    </div>
+
+    <h2><i data-ic="shirt"></i> 아기 옷 브랜드</h2>
+    <div class="card" id="clothBrands"></div>
+    <p class="note">※ 브랜드는 많이 찾는 곳을 예시로 모은 것이며 광고가 아니에요. 가격대 표시는 대략적인 기준이에요. 브랜드를 누르면 네이버쇼핑 검색으로 이동해요. 가격·재고·안전인증(KC)은 구매 전에 꼭 확인하세요.</p>
+  </section>
+
+  <!-- ===== 기록 ===== -->
+  <section class="tab" id="tab-log">
+    <div class="card stats-card">
+      <div class="stats" id="logStats"></div>
+    </div>
+    <div class="card">
+      <h3>버튼을 누르면 지금 시각으로 기록돼요</h3>
+      <div class="log-grid">
+        <button data-log="breastL"><span class="ico"><i data-ic="mom"></i></span>모유 (왼쪽)</button>
+        <button data-log="breastR"><span class="ico"><i data-ic="mom"></i></span>모유 (오른쪽)</button>
+        <button data-log="formula"><span class="ico"><i data-ic="bottle"></i></span>분유</button>
+        <button data-log="pee"><span class="ico"><i data-ic="drop"></i></span>소변</button>
+        <button data-log="poo"><span class="ico"><i data-ic="diaper"></i></span>대변</button>
+        <button data-log="sleep" id="sleepBtn"></button>
+      </div>
+      <div class="ml-row">
+        <label class="small" for="mlIn"><i data-ic="bottle"></i> 분유량</label>
+        <input type="number" id="mlIn" value="120" min="0" step="10"> <span class="small">ml</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between;flex-wrap:nowrap">
+        <h3 style="margin:0;white-space:nowrap"><i data-ic="clock"></i> 타임라인</h3>
+        <input type="date" id="logDate" style="width:auto">
+      </div>
+      <div id="timeline" style="margin-top:8px"></div>
+    </div>
+  </section>
+
+  <!-- ===== 건강 ===== -->
+  <section class="tab" id="tab-health">
+    <div class="card">
+      <h3><i data-ic="syringe"></i> 예방접종</h3>
+      <div id="vaxList"></div>
+      <p class="note">국가 표준 접종 일정 기준이에요. 백신 종류와 아기 상태에 따라 달라질 수 있으니 소아과와 <a class="ext" href="https://nip.kdca.go.kr" target="_blank" rel="noopener">질병관리청 예방접종도우미</a>에서 꼭 확인하세요.</p>
+    </div>
+    <div class="card">
+      <h3><i data-ic="stetho"></i> 영유아 건강검진</h3>
+      <div id="checkupList"></div>
+      <p class="note">국민건강보험 영유아 건강검진(무료) 기준이에요.</p>
+    </div>
+    <div class="card">
+      <h3><i data-ic="trend"></i> 성장 기록</h3>
+      <div class="grow-form">
+        <input type="date" id="gDate">
+        <input type="number" id="gH" placeholder="키 cm" step="0.1">
+        <input type="number" id="gW" placeholder="몸무게 kg" step="0.01">
+        <button id="gAdd">추가</button>
+      </div>
+      <div id="growCharts" style="margin-top:12px"></div>
+      <div id="growList"></div>
+    </div>
+    <div class="card">
+      <h3><i data-ic="ruler"></i> 옷 사이즈 가이드</h3>
+      <div id="sizeGuide"></div>
+    </div>
+    <div class="card">
+      <h3><i data-ic="alert"></i> 리콜 · 안전 정보</h3>
+      <p style="font-size:14px;margin:0 0 8px">사려는 제품이나 쓰고 있는 제품이 리콜 대상인지 아래에서 검색해보세요.</p>
+      <div class="row" style="flex-wrap:nowrap">
+        <input type="text" id="recallQ" placeholder="제품명 또는 브랜드">
+        <button id="recallGo"><i data-ic="search"></i> 검색</button>
+      </div>
+      <ul style="font-size:14px;padding-left:18px;margin:12px 0 0">
+        <li><a class="ext" href="https://www.safetykorea.kr" target="_blank" rel="noopener">제품안전정보센터</a> — KC 인증 조회, 리콜 제품 목록</li>
+        <li><a class="ext" href="https://www.consumer.go.kr" target="_blank" rel="noopener">소비자24</a> — 국내외 리콜 정보 통합</li>
+      </ul>
+      <p class="note">중고 카시트는 사고 이력을 알 수 없으니 되도록 새 제품을 쓰세요.</p>
+    </div>
+  </section>
+
+  <!-- ===== 준비(체크리스트) ===== -->
+  <section class="tab" id="tab-check">
+    <div class="card">
+      <div class="row" style="justify-content:space-between">
+        <h3 style="margin:0"><i data-ic="check"></i> 준비 현황</h3>
+        <span id="progText" class="small"></span>
+      </div>
+      <div class="progress"><div id="progBar" style="width:0%"></div></div>
+      <div class="row" style="justify-content:space-between;margin-top:14px;flex-wrap:nowrap">
+        <h3 style="margin:0;white-space:nowrap"><i data-ic="wallet"></i> 예산</h3>
+        <span class="row" style="gap:4px;flex-wrap:nowrap"><input type="number" id="budget" placeholder="총 예산" style="width:130px;padding:6px 8px" step="10000"><span class="small">원</span></span>
+      </div>
+      <div class="progress" id="budgetBarWrap"><div id="budgetBar" style="width:0%"></div></div>
+      <div class="small" id="budgetText"></div>
+      <div class="chips" id="clFilter" style="margin:12px 0 0">
+        <button class="chip on" data-f="age">우리 아기 월령</button>
+        <button class="chip" data-f="all">전체 품목</button>
+      </div>
+      <p class="note">체크한 뒤 산 가격을 적으면 예산에 합산돼요. 써보고 <i data-ic="up"></i> / <i data-ic="down"></i> 를 남기면 "내 후기"에 모여요.</p>
+    </div>
+    <div id="checkList"></div>
+
+    <h2><i data-ic="chat"></i> 내 후기</h2>
+    <div class="card" id="myReviews"></div>
+
+    <h2><i data-ic="users"></i> 가족 공유 · 백업</h2>
+    <div class="card">
+      <p style="font-size:14px;margin:0 0 10px">체크리스트, 육아 기록, 성장 기록, 접종 기록을 다른 폰으로 옮길 수 있어요. 프로필 사진은 백업 파일에만 들어가요.</p>
+      <div class="row">
+        <button class="plain" id="copyCode"><i data-ic="copy"></i> 공유 코드 복사</button>
+        <button class="plain" id="saveBackup"><i data-ic="download"></i> 백업 파일 저장</button>
+        <label class="btn plain"><i data-ic="folder"></i> 백업 불러오기<input type="file" id="loadBackup" accept=".json,application/json" hidden></label>
+      </div>
+      <textarea id="codeIn" placeholder="가족에게 받은 공유 코드를 여기에 붙여넣으세요" style="margin-top:10px"></textarea>
+      <button id="applyCode" style="margin-top:6px">코드로 불러오기</button>
+      <p class="note" id="shareMsg"></p>
+    </div>
+  </section>
+</div>
+
+<nav class="tabs"><div class="inner">
+  <button class="on" data-tab="rec"><span class="ico"><i data-ic="heart"></i></span>추천</button>
+  <button data-tab="log"><span class="ico"><i data-ic="note"></i></span>기록</button>
+  <button data-tab="health"><span class="ico"><i data-ic="stetho"></i></span>건강</button>
+  <button data-tab="check"><span class="ico"><i data-ic="check"></i></span>준비</button>
+</div></nav>
+
+<script>
+// =====================================================================
+// 아이콘 (인터넷 없이도 보이도록 직접 그린 라인 아이콘)
+// =====================================================================
+const ICONS = {
+  // UI
+  baby: '<circle cx="12" cy="13" r="8"/><path d="M12 5c-1.5-1-1-3 1-3"/><circle cx="9.2" cy="12.5" r=".7" fill="currentColor"/><circle cx="14.8" cy="12.5" r=".7" fill="currentColor"/><path d="M9.5 16c1.4 1.2 3.6 1.2 5 0"/>',
+  camera: '<path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="4"/>',
+  bell: '<path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/>',
+  heart: '<path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/>',
+  gift: '<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10 4 6 4 6 6.5 6 8 8 8 12 8zM12 8c2-4 6-4 6-1.5C18 8 16 8 12 8z"/>',
+  chat: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/>',
+  mom: '<circle cx="12" cy="5.5" r="2.5"/><path d="M6 21v-3a6 6 0 0 1 12 0v3"/><path d="M9 14.5c1.5 1.5 4.5 1.5 6 0"/>',
+  drop: '<path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/>',
+  moon: '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  syringe: '<path d="M16.5 2.5l3 3M18 4l-2.5 2.5M17 8l-9 9-3-3 9-9z"/><path d="M6.5 15.5 3 19M11 11l1.5 1.5M13.5 8.5 15 10"/>',
+  stetho: '<path d="M5 3v5a4 4 0 0 0 8 0V3"/><path d="M9 12v3a5 5 0 0 0 10 0v-2"/><circle cx="19" cy="11" r="2"/>',
+  trend: '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+  alert: '<path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/>',
+  search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
+  check: '<rect x="3" y="3" width="18" height="18" rx="5"/><path d="m8 12 3 3 5-6"/>',
+  wallet: '<rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18"/><circle cx="16.5" cy="15" r="1"/>',
+  up: '<path d="M7 10v10H4V10zM7 10l4-7c1.5 0 2.5 1 2.5 2.5L13 10h5.5a2 2 0 0 1 2 2.3l-1.2 6a2 2 0 0 1-2 1.7H7"/>',
+  down: '<g transform="rotate(180 12 12)"><path d="M7 10v10H4V10zM7 10l4-7c1.5 0 2.5 1 2.5 2.5L13 10h5.5a2 2 0 0 1 2 2.3l-1.2 6a2 2 0 0 1-2 1.7H7"/></g>',
+  users: '<circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14a5 5 0 0 1 5 6"/>',
+  copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
+  download: '<path d="M12 3v12M7 10l5 5 5-5M4 20h16"/>',
+  folder: '<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',
+  ruler: '<path d="M3 16 16 3l5 5L8 21z"/><path d="M7 12l2 2M10 9l2 2M13 6l2 2"/>',
+  flip: '<path d="M12 3v18"/><path d="M8 7 3 12l5 5zM16 7l5 5-5 5z"/>',
+  reset: '<path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v5h5"/>',
+  lock: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+  note: '<rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h3"/>',
+  bulb: '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c1 1 1 2 1 3h6c0-1 0-2 1-3A6 6 0 0 0 12 3z"/>',
+  flower: '<circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="6" r="3"/><circle cx="18" cy="12" r="3"/><circle cx="12" cy="18" r="3"/><circle cx="6" cy="12" r="3"/>',
+  leaf: '<path d="M5 19C5 10 11 5 20 5c0 9-5 14-14 14z"/><path d="M5 19l8-8"/>',
+  snow: '<path d="M12 2v20M3.3 7l17.4 10M20.7 7 3.3 17"/><path d="m9 4 3 2 3-2M9 20l3-2 3 2"/>',
+  sparkle: '<path d="M11 3l1.8 4.7L17.5 9.5l-4.7 1.8L11 16l-1.8-4.7L4.5 9.5l4.7-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/>',
+  key: '<circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M16 7l3 3M14 9l2 2"/>',
+  // 육아용품
+  shirt: '<path d="M8 3 3 6l2 4 2-1v12h10V9l2 1 2-4-5-3c0 2-1.8 3-4 3S8 5 8 3z"/>',
+  onesie: '<path d="M8 3 4 6l2 4 2-1v7l2 5h4l2-5V9l2 1 2-4-4-3c0 2-1.8 3-4 3S8 5 8 3z"/>',
+  swaddle: '<circle cx="12" cy="6" r="3"/><path d="M7 10c-1 4 0 8 5 11 5-3 6-7 5-11z"/><path d="M7.5 13.5l9 3"/>',
+  crib: '<path d="M3 5v15M21 5v15M3 10h18M3 18h18M7.5 10v8M12 10v8M16.5 10v8"/>',
+  diaper: '<path d="M3 7h18v3a9 9 0 0 1-18 0z"/><path d="M8 7v2.5M16 7v2.5"/>',
+  wipes: '<rect x="3" y="8" width="18" height="12" rx="3"/><path d="M9 8c0-3 6-3 6 0"/><path d="M9 14h6"/>',
+  thermo: '<path d="M14 14.8V4.5a2 2 0 0 0-4 0v10.3a4 4 0 1 0 4 0z"/><path d="M12 9v7"/>',
+  aspirator: '<path d="M8 11a5 5 0 1 0 6 0V7H8z"/><path d="M11 7V2"/>',
+  scissors: '<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/>',
+  bottle: '<path d="M9 2h6M10 2v3M14 2v3"/><path d="M10 5h4a2 2 0 0 1 2 2v12a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V7a2 2 0 0 1 2-2z"/><path d="M8 11h3M8 15h3"/>',
+  steam: '<rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 3c-1 1.5 1 2.5 0 4M12 3c-1 1.5 1 2.5 0 4M16 3c-1 1.5 1 2.5 0 4"/>',
+  pillow: '<path d="M3 9a9 9 0 0 0 18 0h-5a4 4 0 0 1-8 0z"/>',
+  bath: '<path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M6 12V6a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/>',
+  carseat: '<path d="M8 3h5a3 3 0 0 1 3 3v6.5l3 2.5v3a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"/><path d="M8 12h8"/>',
+  stroller: '<path d="M13 3a8 8 0 0 1 8 8h-8z"/><path d="M3 6h2l2 5h14a6 6 0 0 1-6 6h-4a4 4 0 0 1-4-4"/><circle cx="9" cy="20" r="1.8"/><circle cx="17" cy="20" r="1.8"/>',
+  carrier: '<rect x="6" y="7" width="12" height="14" rx="4"/><path d="M9 7V5a3 3 0 0 1 6 0v2M10 13h4"/>',
+  bouncer: '<path d="M4 19h16"/><path d="M6 19c0-7 3-11 7-11 3 0 5 2 5 4"/><path d="M8 19l3-6h6"/>',
+  mobile: '<path d="M12 2v4M5 6h14M5 6v5M19 6v5M12 6v8"/><circle cx="5" cy="13" r="2"/><circle cx="19" cy="13" r="2"/><circle cx="12" cy="16" r="2"/>',
+  gym: '<path d="M3 21a9 9 0 0 1 18 0"/><path d="M8 13v3M16 13v3M12 12v5"/><circle cx="8" cy="17.5" r="1.5"/><circle cx="16" cy="17.5" r="1.5"/>',
+  sleepsack: '<path d="M9 3h6l2 4v10a5 5 0 0 1-10 0V7z"/><path d="M12 9v8"/>',
+  teether: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/>',
+  mat: '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 12h18M12 3v18"/>',
+  chair: '<path d="M7 4v8h10V4"/><path d="M5 12h14v3H5zM7 15l-1 6M17 15l1 6"/>',
+  bowl: '<path d="M3 11h18c0 5-4 8-9 8s-9-3-9-8z"/><path d="M15 3l-3 8"/>',
+  blender: '<path d="M7 3h10l-1.5 9h-7z"/><rect x="7" y="12" width="10" height="9" rx="2"/><circle cx="12" cy="16.5" r="1.2"/>',
+  bib: '<path d="M8 4a4 4 0 0 0 8 0"/><path d="M8 4C4 7 4 15 6 18a6 6 0 0 0 12 0c2-3 2-11-2-14"/>',
+  highchair: '<path d="M7 3v9h10V3"/><path d="M5 12h14M8 12l-2 9M16 12l2 9M7 17h10"/>',
+  cup: '<path d="M7 8h10l-1 13H8z"/><path d="M9 8V6h6v2M13 6l3-4"/>',
+  toothbrush: '<path d="M4 20 14 10"/><path d="M13 7l4 4 3-3-4-4z"/>',
+  shield: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/>',
+  plug: '<path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0zM12 17v5"/>',
+  book: '<path d="M2 5h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2zM22 5h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/>',
+  ridecar: '<rect x="3" y="10" width="15" height="6" rx="3"/><path d="M14 10V5h4"/><circle cx="7" cy="18.5" r="2"/><circle cx="15" cy="18.5" r="2"/>',
+  plate: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/>',
+  shoe: '<path d="M4 6h5l1 4c3 0 6 1 8 3 1.5 1.5 2 3 2 4H4z"/><path d="M4 17v2h16v-2"/>',
+  tent: '<path d="M12 3 3 20h18z"/><path d="M12 3v17M8 20l4-6 4 6"/>',
+  umbrella: '<path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v7a2 2 0 0 1-4 0"/>',
+  humid: '<path d="M8 21h8l1-8H7z"/><path d="M10 10c-1-1.5 1-2.5 0-4M14 10c-1-1.5 1-2.5 0-4"/>',
+  wind: '<path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h7"/>',
+  cap: '<path d="M4 16a8 8 0 0 1 16 0z"/><path d="M2 16h20M12 8V6"/>',
+};
+const ic = (name, cls = '') => `<svg class="ic ${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[name] || ICONS.baby}</svg>`;
+function hydrateIcons(root = document) { root.querySelectorAll('i[data-ic]').forEach(el => { el.outerHTML = ic(el.dataset.ic); }); }
+// 카테고리별 아이콘 타일 색
+const CAT_TONE = { '의류':'accent', '수면':'lav', '위생':'sky', '수유':'gold', '목욕':'sky', '외출':'mint', '놀이':'accent', '안전':'mint', '이유식':'gold', '계절':'sky' };
+const SEASON_ICON = { spring:'flower', summer:'sun', fall:'leaf', winter:'snow' };
+
+// =====================================================================
+// 데이터
+// =====================================================================
+// from/to: 사용 월령(개월), must: 필수, lv: 대략 가격대(1: ~3만, 2: 3~10만, 3: 10만+), rent: 대여 추천
+const PRODUCTS = [
+  { id:'p1',  e:'shirt', name:'배냇저고리', cat:'의류', from:0, to:3, must:true, lv:1, why:'앞트임이라 목을 못 가누는 신생아도 입히기 쉬워요.', tip:'면 100% 제품, 4~6벌이면 충분해요.' },
+  { id:'p2',  e:'swaddle', name:'속싸개', cat:'수면', from:0, to:3, must:true, lv:1, why:'모로반사로 깜짝 놀라 깨는 걸 줄여줘요.', tip:'뒤집기를 시작하면 바로 중단하세요.' },
+  { id:'p3',  e:'crib', name:'아기 침대', cat:'수면', from:0, to:24, must:true, lv:3, why:'아기 혼자 안전하게 자는 공간이에요.', tip:'단단한 매트리스에 범퍼·베개·인형 없이 눕혀요.' },
+  { id:'p4',  e:'diaper', name:'신생아 기저귀', cat:'위생', from:0, to:2, must:true, lv:1, why:'하루 10장 이상 쓰는 시기예요.', tip:'처음엔 소량만 사서 피부에 맞는지 확인하세요.' },
+  { id:'p5',  e:'wipes', name:'물티슈', cat:'위생', from:0, to:36, must:true, lv:1, why:'기저귀 갈 때, 손입 닦을 때 계속 써요.', tip:'무향·저자극 제품을 고르세요.' },
+  { id:'p6',  e:'thermo', name:'체온계', cat:'위생', from:0, to:36, must:true, lv:2, why:'열이 나는지 바로 확인해야 해요.', tip:'귀 체온계가 빠르고 편해요.' },
+  { id:'p7',  e:'aspirator', name:'콧물흡입기', cat:'위생', from:0, to:24, must:true, lv:1, why:'아기는 스스로 코를 풀 수 없어요.', tip:'' },
+  { id:'p8',  e:'scissors', name:'유아 손톱깎이', cat:'위생', from:0, to:24, must:true, lv:1, why:'손톱으로 얼굴을 긁기 쉬워요.', tip:'잠들었을 때 깎으면 수월해요.' },
+  { id:'p9',  e:'bottle', name:'젖병 & 젖병솔', cat:'수유', from:0, to:12, must:true, lv:1, why:'분유·유축 수유에 필요해요.', tip:'2~3개로 시작해서 아기가 잘 무는 걸 늘리세요.' },
+  { id:'p10', e:'steam', name:'젖병 소독기', cat:'수유', from:0, to:12, must:false, lv:3, why:'소독·건조를 한 번에 해줘요.', tip:'열탕 소독으로 대체할 수 있어요.' },
+  { id:'p11', e:'pillow', name:'수유쿠션', cat:'수유', from:0, to:6, must:false, lv:2, why:'수유 자세를 편하게 잡아줘요.', tip:'일반 쿠션으로 대체하는 집도 많아요.' },
+  { id:'p12', e:'bath', name:'아기 욕조', cat:'목욕', from:0, to:12, must:true, lv:2, why:'작은 아기를 안정적으로 씻길 수 있어요.', tip:'접이식이면 보관이 편해요.' },
+  { id:'p13', e:'carseat', name:'신생아 카시트', cat:'외출', from:0, to:12, must:true, lv:3, why:'산부인과 퇴원 날부터 필요해요.', tip:'뒤보기 장착이 원칙이에요.' },
+  { id:'p14', e:'stroller', name:'유모차', cat:'외출', from:1, to:36, must:true, lv:3, why:'산책·외출의 기본이에요.', tip:'디럭스는 안정감, 휴대용은 가벼움이 장점이에요.' },
+  { id:'p15', e:'carrier', name:'아기띠 / 힙시트', cat:'외출', from:1, to:24, must:false, lv:3, why:'두 손이 자유로워져요.', tip:'허리 지지력이 좋은지 꼭 착용해보세요.' },
+  { id:'p16', e:'bouncer', name:'바운서', cat:'놀이', from:1, to:6, must:false, lv:2, rent:true, why:'잠깐 아기를 앉혀둘 수 있어요.', tip:'쓰는 기간이 짧아 대여를 많이 해요.' },
+  { id:'p17', e:'mobile', name:'흑백 모빌 / 초점책', cat:'놀이', from:0, to:4, must:false, lv:1, why:'시각 발달 초기에 흥미를 줘요.', tip:'' },
+  { id:'p18', e:'gym', name:'아기 체육관(플레이짐)', cat:'놀이', from:2, to:8, must:false, lv:2, rent:true, why:'누워서 손발을 움직이며 놀아요.', tip:'' },
+  { id:'p19', e:'sleepsack', name:'수면조끼', cat:'수면', from:3, to:24, must:true, lv:2, why:'이불을 차내도 따뜻하고 얼굴을 덮지 않아요.', tip:'' },
+  { id:'p20', e:'teether', name:'치발기', cat:'놀이', from:3, to:12, must:true, lv:1, why:'이가 나면서 간지러운 잇몸을 달래줘요.', tip:'냉장 보관해서 주면 더 좋아해요.' },
+  { id:'p21', e:'mat', name:'놀이매트', cat:'안전', from:4, to:36, must:true, lv:3, why:'뒤집기·기기 시작하면 넘어져도 안전해요.', tip:'층간소음에도 도움돼요.' },
+  { id:'p22', e:'chair', name:'아기 의자(범보 등)', cat:'이유식', from:4, to:9, must:false, lv:2, rent:true, why:'앉는 연습과 이유식 초기에 써요.', tip:'' },
+  { id:'p23', e:'bowl', name:'이유식 용기 & 숟가락', cat:'이유식', from:5, to:18, must:true, lv:1, why:'이유식은 보통 만 4~6개월에 시작해요.', tip:'실리콘 숟가락이 잇몸에 부드러워요.' },
+  { id:'p24', e:'blender', name:'이유식 마스터기', cat:'이유식', from:5, to:12, must:false, lv:3, why:'찌고 갈기를 한 번에 해줘요.', tip:'냄비 + 핸드블렌더로 충분히 대체돼요.' },
+  { id:'p25', e:'bib', name:'턱받이', cat:'이유식', from:5, to:24, must:true, lv:1, why:'침과 이유식 흘림을 막아줘요.', tip:'방수 소재가 편해요.' },
+  { id:'p26', e:'highchair', name:'하이체어', cat:'이유식', from:6, to:36, must:true, lv:3, why:'식탁에서 같이 먹는 습관을 들여요.', tip:'높이 조절되는 제품이 오래 써요.' },
+  { id:'p27', e:'cup', name:'빨대컵', cat:'이유식', from:6, to:18, must:true, lv:1, why:'물 마시기 연습을 시작해요.', tip:'' },
+  { id:'p28', e:'toothbrush', name:'유아 칫솔', cat:'위생', from:6, to:36, must:true, lv:1, why:'첫 이가 나면 양치를 시작해요.', tip:'처음엔 거즈나 손가락 칫솔로도 충분해요.' },
+  { id:'p29', e:'shield', name:'안전문 / 코너가드', cat:'안전', from:6, to:36, must:true, lv:2, why:'기어 다니기 시작하면 사고가 잦아져요.', tip:'계단·주방 앞부터 설치하세요.' },
+  { id:'p30', e:'plug', name:'콘센트 커버', cat:'안전', from:6, to:36, must:true, lv:1, why:'손가락을 넣는 사고를 막아요.', tip:'' },
+  { id:'p31', e:'book', name:'그림책', cat:'놀이', from:6, to:36, must:true, lv:1, why:'언어 발달에 가장 좋은 놀잇감이에요.', tip:'두꺼운 보드북이 오래가요.' },
+  { id:'p32', e:'carseat', name:'컨버터블 카시트', cat:'외출', from:9, to:48, must:true, lv:3, why:'신생아 카시트가 작아질 때 바꿔요.', tip:'' },
+  { id:'p33', e:'ridecar', name:'걸음마 보조기 / 붕붕카', cat:'놀이', from:9, to:24, must:false, lv:2, rent:true, why:'걷기 연습을 재밌게 해줘요.', tip:'' },
+  { id:'p34', e:'plate', name:'유아 식판', cat:'이유식', from:10, to:36, must:true, lv:1, why:'유아식으로 넘어가며 스스로 먹기 연습을 해요.', tip:'흡착 바닥이면 덜 엎어요.' },
+  { id:'p35', e:'shoe', name:'첫 걸음마 신발', cat:'의류', from:10, to:24, must:true, lv:1, why:'밖에서 걷기 시작할 때 필요해요.', tip:'실내에서는 맨발이 발달에 좋아요.' },
+];
+const LV_TEXT = { 1: '~3만원', 2: '3~10만원', 3: '10만원+' };
+
+// 계절 용품 (season: 봄 spring, 여름 summer, 가을 fall, 겨울 winter)
+const SEASONAL = [
+  { id:'s1', e:'snow', name:'쿨매트 / 인견 패드', cat:'계절', seasons:['summer'], from:0, to:36, must:false, lv:2, why:'땀띠를 줄이고 시원하게 재워줘요.', tip:'' },
+  { id:'s2', e:'tent', name:'모기장', cat:'계절', seasons:['summer'], from:0, to:36, must:true, lv:1, why:'아기 피부는 모기에 물리면 크게 부어요.', tip:'' },
+  { id:'s3', e:'sun', name:'아기 선크림', cat:'계절', seasons:['spring','summer'], from:6, to:36, must:true, lv:1, why:'6개월 이후부터 외출 시 발라주세요.', tip:'6개월 전에는 모자·그늘로 햇빛을 피하는 게 우선이에요.' },
+  { id:'s4', e:'umbrella', name:'유모차 레인커버', cat:'계절', seasons:['summer'], from:1, to:36, must:false, lv:1, why:'장마철 외출에 필요해요.', tip:'' },
+  { id:'s5', e:'swaddle', name:'유모차 방한커버', cat:'계절', seasons:['winter'], from:1, to:36, must:true, lv:2, why:'찬바람을 막아줘요.', tip:'' },
+  { id:'s6', e:'humid', name:'가습기', cat:'계절', seasons:['winter','fall'], from:0, to:36, must:true, lv:2, why:'건조한 계절, 코와 피부를 촉촉하게 해줘요.', tip:'매일 물을 갈고 자주 세척하세요.' },
+  { id:'s7', e:'onesie', name:'두꺼운 우주복 / 내복', cat:'계절', seasons:['winter'], from:0, to:24, must:true, lv:2, why:'한 벌로 보온이 되어 외출이 편해요.', tip:'카시트에는 두꺼운 외투를 벗기고 태우세요.' },
+  { id:'s8', e:'wind', name:'공기청정기', cat:'계절', seasons:['spring','fall','winter'], from:0, to:36, must:false, lv:3, why:'미세먼지가 심한 날 실내 공기를 관리해요.', tip:'' },
+  { id:'s9', e:'cap', name:'얇은 바람막이 겉옷 / 모자', cat:'계절', seasons:['spring','fall'], from:0, to:36, must:true, lv:1, why:'일교차가 큰 계절에 꼭 챙겨요.', tip:'' },
+];
+const SEASON_NAME = { spring:'봄', summer:'여름', fall:'가을', winter:'겨울' };
+
+const BRANDS = {
+  p1:['모이몰른','알로앤루','베베드피노','카터스'], p2:['스와들업','에이든앤아나이스'], p3:['스토케','꿈비'],
+  p4:['하기스','팸퍼스','보솜이','마미포코'], p5:['몽드드','베베숲'], p6:['브라운 써모스캔'], p7:['노즈프리다'],
+  p8:['피죤'], p9:['더블하트','헤겐','닥터브라운','모윰'], p10:['유팡','스펙트라'], p12:['스토케 플렉시바스','오케이베이비'],
+  p13:['맥시코시','싸이벡스','다이치'], p14:['부가부','스토케','베이비젠 요요','리안'], p15:['에르고베이비','포그내'],
+  p16:['베이비뵨'], p17:['타이니러브'], p18:['피셔프라이스','타이니러브'], p19:['에이든앤아나이스'], p20:['소피 기린','먼치킨'],
+  p21:['알집매트','크림하우스','파크론'], p22:['범보'], p23:['글라스락','에디슨'], p24:['베이비브레짜','베아바'],
+  p25:['베이비뵨'], p26:['스토케 트립트랩','잉글레시나','이케아 안틸로프'], p27:['릿첼','피죤','먼치킨'], p28:['피죤'],
+  p29:['베이비단'], p31:['블루래빗'], p32:['다이치','싸이벡스','브라이텍스'], p33:['피셔프라이스','브이텍'],
+  p34:['에디슨','그로미미'], p35:['아띠빠스'],
+};
+
+const CLOTH_BRANDS = [
+  { name:'모이몰른', from:'국내', desc:'내의부터 외출복까지 데일리 아이템이 다양해요.' },
+  { name:'알로앤루', from:'국내', desc:'귀여운 캐릭터 디자인이 많아 선물용으로 인기예요.' },
+  { name:'베베드피노', from:'국내', desc:'깔끔하고 세련된 디자인의 외출복이 많아요.' },
+  { name:'카터스', from:'미국', desc:'바디슈트·우주복 세트 같은 실용 기본템이 강점이에요.' },
+  { name:'유니클로 베이비', from:'일본', desc:'기본 내의·레깅스를 매장에서 쉽게 살 수 있어요.' },
+  { name:'H&M 베이비', from:'스웨덴', desc:'오가닉 면 제품과 트렌디한 디자인이 많아요.' },
+  { name:'자라 베이비', from:'스페인', desc:'사진 찍기 좋은 외출복·스타일링 아이템이 많아요.' },
+];
+
+const TIPS = [
+  ['shirt', '신생아 옷은 금방 작아져요. 59~60 사이즈는 적게, 70 사이즈부터 넉넉히 사도 늦지 않아요.'],
+  ['bouncer', '바운서·보행기·플레이짐처럼 몇 달만 쓰는 건 대여나 중고가 경제적이에요.'],
+  ['bottle', '젖병은 아기마다 선호가 달라서, 한 종류를 많이 사기 전에 1~2개로 먼저 테스트해보세요.'],
+  ['gift', '출산 선물로 비슷한 물건(손수건·내의)이 많이 들어와요. 출산 후에 필요한 걸 사도 충분해요.'],
+  ['shield', '카시트·아기 침대·체온계처럼 안전과 직결된 물건은 새 제품을 추천해요.'],
+  ['diaper', '기저귀는 아기가 금방 크니 한 사이즈를 대량으로 사두지 마세요.'],
+];
+
+// 예방접종 (m: 접종 시작 월령)
+const VACCINES = [
+  { id:'v1',  m:0,  name:'B형간염 1차', note:'출생 직후' },
+  { id:'v2',  m:0,  name:'BCG (결핵)', note:'생후 4주 이내' },
+  { id:'v3',  m:1,  name:'B형간염 2차', note:'1개월' },
+  { id:'v4',  m:2,  name:'DTaP 1차', note:'2개월' },
+  { id:'v5',  m:2,  name:'폴리오(IPV) 1차', note:'2개월' },
+  { id:'v6',  m:2,  name:'Hib 1차', note:'2개월' },
+  { id:'v7',  m:2,  name:'폐렴구균 1차', note:'2개월' },
+  { id:'v8',  m:2,  name:'로타바이러스 1차', note:'2개월' },
+  { id:'v9',  m:4,  name:'DTaP 2차', note:'4개월' },
+  { id:'v10', m:4,  name:'폴리오(IPV) 2차', note:'4개월' },
+  { id:'v11', m:4,  name:'Hib 2차', note:'4개월' },
+  { id:'v12', m:4,  name:'폐렴구균 2차', note:'4개월' },
+  { id:'v13', m:4,  name:'로타바이러스 2차', note:'4개월' },
+  { id:'v14', m:6,  name:'B형간염 3차', note:'6개월' },
+  { id:'v15', m:6,  name:'DTaP 3차', note:'6개월' },
+  { id:'v16', m:6,  name:'폴리오(IPV) 3차', note:'6~18개월' },
+  { id:'v17', m:6,  name:'Hib 3차', note:'6개월' },
+  { id:'v18', m:6,  name:'폐렴구균 3차', note:'6개월' },
+  { id:'v19', m:6,  name:'로타바이러스 3차', note:'백신 종류에 따라' },
+  { id:'v20', m:6,  name:'인플루엔자', note:'6개월 이상, 매년 가을' },
+  { id:'v21', m:12, name:'MMR 1차', note:'12~15개월' },
+  { id:'v22', m:12, name:'수두', note:'12~15개월' },
+  { id:'v23', m:12, name:'Hib 4차', note:'12~15개월' },
+  { id:'v24', m:12, name:'폐렴구균 4차', note:'12~15개월' },
+  { id:'v25', m:12, name:'A형간염 1차', note:'12~23개월' },
+  { id:'v26', m:12, name:'일본뇌염 1차', note:'12~23개월, 백신별 일정 다름' },
+  { id:'v27', m:15, name:'DTaP 4차', note:'15~18개월' },
+  { id:'v28', m:18, name:'A형간염 2차', note:'1차 후 6~12개월' },
+];
+
+// 영유아 건강검진 (m: 시작 월령, d: 시작 일수 – 1차만)
+const CHECKUPS = [
+  { id:'c1', m:0,  d:14, name:'1차 검진', range:'생후 14~35일' },
+  { id:'c2', m:4,  name:'2차 검진', range:'4~6개월' },
+  { id:'c3', m:9,  name:'3차 검진', range:'9~12개월' },
+  { id:'c4', m:18, name:'4차 검진', range:'18~24개월' },
+  { id:'c5', m:30, name:'5차 검진', range:'30~36개월' },
+  { id:'c6', m:42, name:'6차 검진', range:'42~48개월' },
+  { id:'c7', m:54, name:'7차 검진', range:'54~60개월' },
+  { id:'c8', m:66, name:'8차 검진', range:'66~71개월' },
+];
+
+// 월령별 평균 키(대략) – 키 기록이 없을 때 사이즈 추정용
+const EST_H = [[0,50],[1,54],[2,58],[3,61],[4,63],[6,67],[9,71],[12,75],[18,81],[24,87],[36,95],[48,102]];
+const KR_SIZES = [['59~60',60],['70',70],['80',80],['90',90],['100',100],['110',110]];
+const US_SIZES = [['NB',55],['3M',61],['6M',67],['9M',72],['12M',77],['18M',83],['24M',88],['3T',97]];
+
+// =====================================================================
+// 저장 / 상태
+// =====================================================================
+const KEYS = ['birth','name','photo','checked','prices','budget','votes','logs','growth','vax'];
+const store = {
+  get(k, d) { try { const v = localStorage.getItem('baby.' + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('baby.' + k, JSON.stringify(v)); } catch {} }
+};
+let S;
+function loadState() {
+  S = {
+    birth: store.get('birth', ''), name: store.get('name', ''), photo: store.get('photo', ''),
+    checked: store.get('checked', {}), prices: store.get('prices', {}), budget: store.get('budget', ''),
+    votes: store.get('votes', {}), logs: store.get('logs', []), growth: store.get('growth', []), vax: store.get('vax', {}),
+  };
+}
+loadState();
+const save = k => store.set(k, S[k]);
+
+let recFilter = 'all', clFilter = 'age';
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+const shopLink = q => 'https://search.shopping.naver.com/search/all?query=' + encodeURIComponent(q);
+const won = n => (Math.round(n) || 0).toLocaleString('ko-KR') + '원';
+const ymd = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const hm = t => { const d = new Date(t); return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`; };
+function ago(ms) {
+  const m = Math.floor(ms / 60000);
+  if (m < 1) return '방금';
+  if (m < 60) return `${m}분 전`;
+  return `${Math.floor(m / 60)}시간 ${m % 60}분 전`;
+}
+function dur(ms) {
+  const m = Math.round(ms / 60000);
+  return m < 60 ? `${m}분` : `${Math.floor(m / 60)}시간 ${m % 60}분`;
+}
+
+// =====================================================================
+// 월령
+// =====================================================================
+const birthDate = () => S.birth ? new Date(S.birth + 'T00:00:00') : null;
+function monthAge() {
+  const b = birthDate(); if (!b) return null;
+  const now = new Date();
+  if (now < b) return -1;
+  let m = (now.getFullYear() - b.getFullYear()) * 12 + (now.getMonth() - b.getMonth());
+  if (now.getDate() < b.getDate()) m--;
+  return m;
+}
+function dateAt(months, days = 0) {
+  const b = birthDate(); if (!b) return null;
+  const d = new Date(b); d.setMonth(d.getMonth() + months); d.setDate(d.getDate() + days); return d;
+}
+function dday(d) {
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const n = Math.round((d - today) / 86400000);
+  return n === 0 ? 'D-day' : n > 0 ? `D-${n}` : `D+${-n}`;
+}
+const season = () => { const m = new Date().getMonth() + 1; return m >= 3 && m <= 5 ? 'spring' : m >= 6 && m <= 8 ? 'summer' : m >= 9 && m <= 11 ? 'fall' : 'winter'; };
+
+function renderAge() {
+  const m = monthAge(), who = esc(S.name.trim() || '아기'), el = $('ageLine');
+  if (m === null) { el.innerHTML = '생일을 입력하면 월령에 맞춰 추천해드려요.'; return; }
+  if (m < 0) { el.innerHTML = `<span class="age-badge">출산 ${dday(birthDate())}</span> ${who}를 맞이할 준비물을 보여드릴게요.`; return; }
+  const y = Math.floor(m / 12), mm = m % 12;
+  el.innerHTML = `<span class="age-badge">${y ? `${y}살 ${mm}개월` : `${m}개월`}</span> ${who}에게 맞는 용품이에요.`;
+}
+
+// =====================================================================
+// 추천
+// =====================================================================
+function brandChips(p) {
+  const bs = BRANDS[p.id];
+  const base = p.name.split(/[\/&(]/)[0].trim();
+  if (!bs) return `<div class="brands"><a class="brand" href="${shopLink(base)}" target="_blank" rel="noopener">${ic('search')} 쇼핑 검색</a></div>`;
+  return `<div class="brands"><span class="brands-label">추천 브랜드</span>${bs.map(b =>
+    `<a class="brand" href="${shopLink(b + ' ' + base)}" target="_blank" rel="noopener">${b}</a>`).join('')}</div>`;
+}
+function itemHTML(p, showRange) {
+  const done = !!S.checked[p.id];
+  return `<div class="card item">
+    <div class="emoji t-${CAT_TONE[p.cat] || 'accent'}">${ic(p.e)}</div>
+    <div class="body">
+      <div class="name">${p.name}</div>
+      <div class="tags"><span class="tag ${p.must ? 'must' : 'opt'}">${p.must ? '필수' : '있으면 좋음'}</span>${p.rent ? '<span class="tag rent">대여 추천</span>' : ''}<span class="tag price">${LV_TEXT[p.lv]}</span>${showRange ? `<span class="tag when">${p.from}개월부터</span>` : ''}</div>
+      <div class="why">${p.why}</div>
+      ${p.tip ? `<div class="tip">${ic('bulb')} ${p.tip}</div>` : ''}
+      ${brandChips(p)}
+    </div>
+    <button class="check-btn ${done ? 'done' : 'ghost'}" data-id="${p.id}">${done ? '✓ 준비됨' : '+ 준비'}</button>
+  </div>`;
+}
+const ageNow = () => Math.max(monthAge() ?? 0, 0);
+function renderRec() {
+  const m = monthAge(), age = ageNow(), pre = m !== null && m < 0;
+  const list = PRODUCTS.filter(p => recFilter === 'all' || p.must);
+  const now = list.filter(p => p.from <= age && age <= p.to);
+  const soon = list.filter(p => p.from > age && p.from <= age + 3).sort((a, b) => a.from - b.from);
+  $('nowTitle').textContent = pre ? '출산 전에 준비할 것' : '지금 필요한 것';
+  $('nowList').innerHTML = now.map(p => itemHTML(p)).join('') || '<div class="empty">해당하는 품목이 없어요</div>';
+  $('soonList').innerHTML = soon.map(p => itemHTML(p, true)).join('') || '<div class="empty">당분간 새로 살 건 없어요</div>';
+  const se = season();
+  $('seasonTitle').innerHTML = `${ic(SEASON_ICON[se])} ${SEASON_NAME[se]}에 필요한 것`;
+  const seas = SEASONAL.filter(p => p.seasons.includes(se) && p.from <= age && age <= p.to && (recFilter === 'all' || p.must));
+  $('seasonList').innerHTML = seas.map(p => itemHTML(p)).join('') || '<div class="empty">이번 계절 특별히 필요한 건 없어요</div>';
+}
+function renderTips() { $('tipsList').innerHTML = TIPS.map(([i, t]) => `<div class="cb-row tip-row"><span class="tip-ic">${ic(i)}</span><div>${t}</div></div>`).join(''); }
+function renderClothBrands() {
+  $('clothBrands').innerHTML = CLOTH_BRANDS.map(b => `
+    <div class="cb-row">
+      <div><span class="cb-name">${b.name}</span><span class="cb-from">${b.from}</span><div class="cb-desc">${b.desc}</div></div>
+      <a class="brand" href="${shopLink(b.name + ' 아기옷')}" target="_blank" rel="noopener">보기</a>
+    </div>`).join('');
+}
+
+// 다음 할 일 (접종·검진·수유)
+function renderTodo() {
+  const rows = [];
+  if (birthDate()) {
+    // 한 달 넘게 지난 항목은 이미 했을 가능성이 높으니 배너에서는 빼요 (건강 탭에는 계속 표시)
+    const cutoff = Date.now() - 30 * 86400000;
+    const nv = VACCINES.filter(v => !S.vax[v.id]).map(v => ({ v, d: dateAt(v.m) })).filter(x => x.d >= cutoff).sort((a, b) => a.d - b.d)[0];
+    if (nv) rows.push(`<div class="todo">${ic('syringe')} <span>${nv.v.name} <span class="small">(${nv.v.note})</span></span><span class="d">${dday(nv.d)}</span></div>`);
+    const nc = CHECKUPS.filter(c => !S.vax[c.id]).map(c => ({ c, d: dateAt(c.m, c.d || 0) })).filter(x => x.d >= cutoff).sort((a, b) => a.d - b.d)[0];
+    if (nc) rows.push(`<div class="todo">${ic('stetho')} <span>영유아 ${nc.c.name} <span class="small">(${nc.c.range})</span></span><span class="d">${dday(nc.d)}</span></div>`);
+  }
+  const lf = lastOf(['breastL', 'breastR', 'formula']);
+  if (lf) rows.push(`<div class="todo">${ic('bottle')} <span>마지막 수유</span><span class="d">${ago(Date.now() - lf.t)}</span></div>`);
+  $('todoCard').hidden = !rows.length;
+  $('todoList').innerHTML = rows.join('');
+}
+
+// 선물 모드
+function initGift() {
+  $('giftAge').innerHTML = Array.from({ length: 37 }, (_, i) => `<option value="${i}">${i === 0 ? '신생아' : i + '개월'}</option>`).join('');
+  $('giftAge').value = Math.min(ageNow(), 36);
+}
+function renderGift() {
+  const a = +$('giftAge').value, lv = +$('giftBudget').value;
+  const list = PRODUCTS.filter(p => p.lv <= lv && p.to >= a && p.from <= a + 3)
+    .sort((x, y) => (y.lv - x.lv) || (x.from - y.from));
+  $('giftList').innerHTML = list.map(p => itemHTML(p, p.from > a)).join('') || '<div class="empty">조건에 맞는 선물이 없어요</div>';
+}
+
+// =====================================================================
+// 체크리스트 · 예산 · 후기
+// =====================================================================
+function renderCheck() {
+  const age = ageNow();
+  const all = PRODUCTS.concat(SEASONAL);
+  const list = clFilter === 'all' ? all : all.filter(p => p.from <= age + 3 && age <= p.to && (!p.seasons || p.seasons.includes(season())));
+  const done = list.filter(p => S.checked[p.id]).length;
+  const pct = list.length ? Math.round(done / list.length * 100) : 0;
+  $('progBar').style.width = pct + '%';
+  $('progText').textContent = `${done} / ${list.length} (${pct}%)`;
+  const cats = [...new Set(list.map(p => p.cat))];
+  $('checkList').innerHTML = cats.map(c => `
+    <div class="card"><h3>${c}</h3>
+      ${list.filter(p => p.cat === c).map(p => {
+        const on = !!S.checked[p.id], v = S.votes[p.id];
+        return `<div class="cl-row ${on ? 'done' : ''}">
+          <label><input type="checkbox" data-id="${p.id}" ${on ? 'checked' : ''}>
+            <span class="cl-ic t-${CAT_TONE[p.cat] || 'accent'}">${ic(p.e)}</span><span>${p.name}${p.must ? '' : ' <small style="color:var(--muted)">(선택)</small>'}</span></label>
+          ${on ? `<button class="vote ${v === 'up' ? 'on' : ''}" data-vote="up" data-id="${p.id}" title="잘 샀어요">${ic('up')}</button>
+                  <button class="vote ${v === 'down' ? 'on' : ''}" data-vote="down" data-id="${p.id}" title="안 써요">${ic('down')}</button>
+                  <input type="number" class="price-in" data-price="${p.id}" placeholder="가격" value="${S.prices[p.id] ?? ''}" step="1000">` : ''}
+        </div>`; }).join('')}
+    </div>`).join('');
+  renderBudget(); renderReviews();
+}
+function renderBudget() {
+  const spent = Object.entries(S.prices).filter(([id]) => S.checked[id]).reduce((s, [, v]) => s + (+v || 0), 0);
+  const b = +S.budget || 0;
+  $('budget').value = S.budget;
+  const pct = b ? Math.min(100, spent / b * 100) : 0;
+  $('budgetBar').style.width = pct + '%';
+  $('budgetBarWrap').classList.toggle('over', b && spent > b);
+  $('budgetText').textContent = b
+    ? `${won(spent)} 사용 · ${spent > b ? won(spent - b) + ' 초과' : won(b - spent) + ' 남음'}`
+    : `지금까지 ${won(spent)} 사용 (예산을 입력하면 남은 금액을 보여줘요)`;
+}
+function renderReviews() {
+  const all = PRODUCTS.concat(SEASONAL);
+  const up = all.filter(p => S.votes[p.id] === 'up'), down = all.filter(p => S.votes[p.id] === 'down');
+  if (!up.length && !down.length) { $('myReviews').innerHTML = '<div class="empty">아직 남긴 후기가 없어요</div>'; return; }
+  $('myReviews').innerHTML =
+    (up.length ? `<h3 class="rv-up">${ic('up')} 잘 산 것</h3><div class="pills">${up.map(p => `<span class="pill">${ic(p.e)} ${p.name}</span>`).join('')}</div>` : '') +
+    (down.length ? `<h3 class="rv-down" style="margin-top:14px">${ic('down')} 안 써도 됐던 것</h3><div class="pills">${down.map(p => `<span class="pill">${ic(p.e)} ${p.name}</span>`).join('')}</div>` : '');
+}
+function toggleCheck(id, val) {
+  if (val === undefined) val = !S.checked[id];
+  if (val) S.checked[id] = true; else delete S.checked[id];
+  save('checked'); renderRec(); renderCheck();
+  if (!$('giftMode').hidden) renderGift();
+}
+
+// =====================================================================
+// 육아 기록
+// =====================================================================
+const LOG_META = {
+  breastL: { e:'mom', t:'모유 (왼쪽)' }, breastR: { e:'mom', t:'모유 (오른쪽)' }, formula: { e:'bottle', t:'분유' },
+  pee: { e:'drop', t:'소변' }, poo: { e:'diaper', t:'대변' }, sleep: { e:'moon', t:'수면' },
+};
+const lastOf = types => S.logs.filter(l => types.includes(l.type)).sort((a, b) => b.t - a.t)[0];
+const openSleep = () => S.logs.find(l => l.type === 'sleep' && !l.end);
+
+function addLog(type) {
+  if (type === 'sleep') {
+    const o = openSleep();
+    if (o) o.end = Date.now(); else S.logs.push({ id: Date.now() + '', type, t: Date.now(), end: null });
+  } else {
+    const e = { id: Date.now() + '', type, t: Date.now() };
+    if (type === 'formula') e.ml = +$('mlIn').value || 0;
+    S.logs.push(e);
+  }
+  save('logs'); $('logDate').value = ymd(new Date()); renderLog(); renderTodo();
+}
+function dayRange(dateStr) { const s = new Date(dateStr + 'T00:00:00').getTime(); return [s, s + 86400000]; }
+function renderLog() {
+  const [s, e] = dayRange($('logDate').value || ymd(new Date()));
+  const day = S.logs.filter(l => l.t >= s && l.t < e).sort((a, b) => b.t - a.t);
+  const feeds = day.filter(l => ['breastL', 'breastR', 'formula'].includes(l.type));
+  const ml = day.filter(l => l.type === 'formula').reduce((a, l) => a + (l.ml || 0), 0);
+  // 그날에 걸친 수면 시간 합계
+  const sleepMs = S.logs.filter(l => l.type === 'sleep').reduce((a, l) => {
+    const st = Math.max(l.t, s), en = Math.min(l.end || Date.now(), e);
+    return a + Math.max(0, en - st);
+  }, 0);
+  const lf = lastOf(['breastL', 'breastR', 'formula']);
+  const o = openSleep();
+  $('logStats').innerHTML = `
+    <div class="stat"><div class="k">마지막 수유</div><div class="v">${lf ? ago(Date.now() - lf.t) : '-'}</div></div>
+    <div class="stat"><div class="k">${o ? '지금 자는 중' : '수면 합계'}</div><div class="v">${o ? dur(Date.now() - o.t) : dur(sleepMs)}</div></div>
+    <div class="stat"><div class="k">수유 횟수</div><div class="v">${feeds.length}회${ml ? ` <small style="font-size:13px;font-weight:500">(분유 ${ml}ml)</small>` : ''}</div></div>
+    <div class="stat"><div class="k">기저귀</div><div class="v">${day.filter(l => l.type === 'pee').length + day.filter(l => l.type === 'poo').length}회 <small style="font-size:13px;font-weight:500">(대변 ${day.filter(l => l.type === 'poo').length})</small></div></div>`;
+  const sb = $('sleepBtn');
+  sb.classList.toggle('sleeping', !!o);
+  sb.innerHTML = o ? `<span class="ico">${ic('sun')}</span>깼어요` : `<span class="ico">${ic('moon')}</span>잠들었어요`;
+  $('timeline').innerHTML = day.map(l => {
+    const m = LOG_META[l.type];
+    let extra = '';
+    if (l.type === 'formula' && l.ml) extra = ` ${l.ml}ml`;
+    if (l.type === 'sleep') extra = l.end ? ` ~ ${hm(l.end)} (${dur(l.end - l.t)})` : ' ~ 자는 중';
+    return `<div class="tl"><span class="time">${hm(l.t)}</span><span class="tl-ic tl-${l.type}">${ic(m.e)}</span><span>${m.t}${extra}</span><button class="x" data-del="${l.id}" title="삭제">✕</button></div>`;
+  }).join('') || '<div class="empty">이 날의 기록이 없어요</div>';
+}
+
+// =====================================================================
+// 건강 (접종 · 검진 · 성장)
+// =====================================================================
+function healthRow(item, d, label) {
+  const done = !!S.vax[item.id];
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const due = !done && d && d - today <= 14 * 86400000;
+  return `<label class="vx ${done ? 'done' : ''} ${due ? 'due' : ''}">
+    <input type="checkbox" data-vax="${item.id}" ${done ? 'checked' : ''}>
+    <span class="nm">${item.name}</span>
+    <span class="when">${label}${d ? `<br>${ymd(d)} ${done ? '' : '· ' + dday(d)}` : ''}</span></label>`;
+}
+function renderHealth() {
+  const hasB = !!birthDate();
+  $('vaxList').innerHTML = (hasB ? '<p class="small" style="margin:0 0 4px">이미 맞은 접종은 체크해주세요. 다음 접종을 알려드려요.</p>' : '<p class="small">생일을 입력하면 날짜와 D-day가 표시돼요.</p>') +
+    VACCINES.map(v => healthRow(v, dateAt(v.m), v.note)).join('');
+  $('checkupList').innerHTML = CHECKUPS.map(c => healthRow(c, dateAt(c.m, c.d || 0), c.range)).join('');
+  renderGrowth();
+}
+function lineChart(pts, unit, color) {
+  if (!pts.length) return '';
+  const W = 320, H = 130, P = 28;
+  const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs) || x0 + 1;
+  let y0 = Math.min(...ys), y1 = Math.max(...ys);
+  if (y0 === y1) { y0 -= 1; y1 += 1; }
+  const sx = x => xs.length === 1 ? W / 2 : P + (x - x0) / (x1 - x0) * (W - P * 2);
+  const sy = y => H - 22 - (y - y0) / (y1 - y0) * (H - 40);
+  const line = pts.map(p => `${sx(p.x).toFixed(1)},${sy(p.y).toFixed(1)}`).join(' ');
+  const last = pts[pts.length - 1];
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${unit} 성장 그래프">
+    <text x="10" y="18" font-size="11" font-weight="700" style="fill:var(--muted)">${unit === 'cm' ? '키' : '몸무게'} (${unit})</text>
+    <line x1="${P}" y1="${H - 22}" x2="${W - P}" y2="${H - 22}" style="stroke:var(--line)"/>
+    <polyline points="${line}" fill="none" style="stroke:${color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    ${pts.map(p => `<circle cx="${sx(p.x)}" cy="${sy(p.y)}" r="4" style="fill:var(--surface);stroke:${color}" stroke-width="2"/>`).join('')}
+    <text x="${sx(last.x)}" y="${sy(last.y) - 9}" font-size="12" text-anchor="middle" font-weight="800" style="fill:${color}">${last.y}</text>
+    <text x="${sx(x0)}" y="${H - 6}" font-size="10" text-anchor="middle" style="fill:var(--muted)">${ymd(new Date(x0)).slice(2)}</text>
+    ${xs.length > 1 ? `<text x="${sx(x1)}" y="${H - 6}" font-size="10" text-anchor="middle" style="fill:var(--muted)">${ymd(new Date(x1)).slice(2)}</text>` : ''}
+  </svg>`;
+}
+function renderGrowth() {
+  const g = [...S.growth].sort((a, b) => a.date.localeCompare(b.date));
+  const toPts = k => g.filter(r => r[k]).map(r => ({ x: new Date(r.date + 'T00:00:00').getTime(), y: r[k] }));
+  $('growCharts').innerHTML = g.length ? lineChart(toPts('h'), 'cm', 'var(--accent)') + lineChart(toPts('w'), 'kg', 'var(--mint)') : '<div class="empty">키와 몸무게를 기록하면 그래프로 보여드려요</div>';
+  $('growList').innerHTML = g.slice().reverse().map(r =>
+    `<div class="tl"><span class="time" style="width:auto">${r.date}</span><span>${r.h ? r.h + 'cm' : ''} ${r.w ? r.w + 'kg' : ''}</span><button class="x" data-gdel="${r.date}">✕</button></div>`).join('');
+}
+
+// =====================================================================
+// 사이즈 가이드
+// =====================================================================
+function estHeight(m) {
+  for (let i = 1; i < EST_H.length; i++) {
+    const [m1, h1] = EST_H[i - 1], [m2, h2] = EST_H[i];
+    if (m <= m2) return h1 + (h2 - h1) * (m - m1) / (m2 - m1);
+  }
+  return EST_H[EST_H.length - 1][1];
+}
+function renderSize() {
+  const latest = [...S.growth].filter(r => r.h).sort((a, b) => b.date.localeCompare(a.date))[0];
+  const m = monthAge();
+  let h, src;
+  if (latest) { h = latest.h; src = `${latest.date}에 기록한 키 ${h}cm 기준`; }
+  else if (m !== null && m >= 0) { h = Math.round(estHeight(m)); src = `${m}개월 평균 키 약 ${h}cm로 추정 (건강 탭에서 키를 기록하면 더 정확해요)`; }
+  else { $('sizeGuide').innerHTML = '<p class="small">생일을 입력하거나 건강 탭에서 키를 기록하면 맞는 사이즈를 알려드려요.</p>'; return; }
+  const kr = KR_SIZES.find(s => s[1] >= h + 3) || KR_SIZES[KR_SIZES.length - 1];
+  const us = US_SIZES.find(s => s[1] >= h + 3) || US_SIZES[US_SIZES.length - 1];
+  const rows = KR_SIZES.map((s, i) => `<tr class="${s === kr ? 'hit' : ''}"><td>${s[0]}</td><td>~${s[1]}cm</td><td>${US_SIZES[i + 1] ? US_SIZES[i + 1][0] : '-'}</td></tr>`).join('');
+  $('sizeGuide').innerHTML = `
+    <div class="size-hero">
+      <div class="size-pill"><div class="k">국내 사이즈</div><div class="v">${kr[0]}</div></div>
+      <div class="size-pill"><div class="k">해외 (카터스 등)</div><div class="v">${us[0]}</div></div>
+    </div>
+    <p class="small" style="margin:8px 2px 0">${src}</p>
+    <table class="size"><tr><th>국내 사이즈</th><th>키</th><th>해외(대략)</th></tr>${rows}</table>
+    <p class="note">국내 아기옷은 보통 사이즈 숫자 = 맞는 키(cm)예요. 금방 크니까 키보다 3cm 이상 여유 있게 고르는 걸 추천해요. 브랜드마다 차이가 있으니 상세페이지 사이즈표를 꼭 확인하세요.</p>`;
+}
+
+// =====================================================================
+// 가족 공유 · 백업
+// =====================================================================
+// withPhoto: 공유 코드는 길어지지 않게 사진을 빼고, 백업 파일에는 넣어요
+function exportData(withPhoto = true) { const o = {}; KEYS.forEach(k => { if (withPhoto || k !== 'photo') o[k] = S[k]; }); return { app: 'baby-app', v: 1, data: o }; }
+function importData(obj) {
+  if (!obj || obj.app !== 'baby-app' || !obj.data) throw new Error('형식이 맞지 않아요');
+  if (!confirm('지금 이 기기의 데이터를 불러온 데이터로 바꿀까요?')) return false;
+  KEYS.forEach(k => { if (k in obj.data) { S[k] = obj.data[k]; save(k); } });
+  syncInputs(); initGift(); renderAll();
+  return true;
+}
+const toCode = o => btoa(unescape(encodeURIComponent(JSON.stringify(o))));
+const fromCode = c => JSON.parse(decodeURIComponent(escape(atob(c.trim()))));
+function shareMsg(t) { $('shareMsg').textContent = t; }
+
+// =====================================================================
+// 렌더 / 이벤트
+// =====================================================================
+function syncInputs() { $('birth').value = S.birth; $('babyName').value = S.name; renderAvatar(); }
+
+// ---------- 프로필 사진 ----------
+function renderAvatar() {
+  const has = !!S.photo;
+  $('avatarImg').hidden = !has; $('avatarEmpty').hidden = has; $('avatarDel').hidden = !has;
+  if (has) $('avatarImg').src = S.photo; else $('avatarImg').removeAttribute('src');
+}
+// 사진을 긴 변 900px JPEG로 줄여서 저장 (브라우저 저장 공간 절약)
+function shrinkImage(file, max = 900) {
+  return new Promise((res, rej) => {
+    const img = new Image();
+    img.onload = () => {
+      const k = Math.min(1, max / Math.max(img.width, img.height));
+      const c = document.createElement('canvas');
+      c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(img.src);
+      res(c.toDataURL('image/jpeg', 0.85));
+    };
+    img.onerror = rej;
+    img.src = URL.createObjectURL(file);
+  });
+}
+$('avatarFile').addEventListener('change', async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try {
+    S.photo = await shrinkImage(f);
+    save('photo');
+    renderAvatar();
+  } catch { alert('사진을 불러올 수 없어요. 다른 사진으로 시도해주세요.'); }
+  e.target.value = '';
+});
+$('avatarDel').addEventListener('click', () => {
+  if (!confirm('프로필 사진을 지울까요?')) return;
+  S.photo = ''; save('photo'); renderAvatar();
+});
+function renderAll() { renderAge(); renderRec(); renderCheck(); renderLog(); renderHealth(); renderSize(); renderTodo(); }
+
+$('birth').addEventListener('change', e => { S.birth = e.target.value; save('birth'); initGift(); renderAll(); });
+$('babyName').addEventListener('input', e => { S.name = e.target.value; save('name'); renderAge(); });
+
+document.addEventListener('click', e => {
+  const t = e.target;
+  const cb = t.closest('.check-btn'); if (cb) return toggleCheck(cb.dataset.id);
+  const vb = t.closest('[data-vote]');
+  if (vb) { const id = vb.dataset.id; S.votes[id] = S.votes[id] === vb.dataset.vote ? undefined : vb.dataset.vote; if (!S.votes[id]) delete S.votes[id]; save('votes'); return renderCheck(); }
+  const lb = t.closest('[data-log]'); if (lb) return addLog(lb.dataset.log);
+  const db = t.closest('[data-del]');
+  if (db) { if (confirm('이 기록을 지울까요?')) { S.logs = S.logs.filter(l => l.id !== db.dataset.del); save('logs'); renderLog(); renderTodo(); } return; }
+  const gd = t.closest('[data-gdel]');
+  if (gd) { S.growth = S.growth.filter(r => r.date !== gd.dataset.gdel); save('growth'); renderGrowth(); renderSize(); }
+});
+document.addEventListener('change', e => {
+  const t = e.target;
+  if (t.matches('#checkList input[type=checkbox]')) toggleCheck(t.dataset.id, t.checked);
+  if (t.dataset.vax) { if (t.checked) S.vax[t.dataset.vax] = true; else delete S.vax[t.dataset.vax]; save('vax'); renderHealth(); renderTodo(); }
+  if (t.dataset.price) { const v = t.value === '' ? undefined : +t.value; if (v === undefined) delete S.prices[t.dataset.price]; else S.prices[t.dataset.price] = v; save('prices'); renderBudget(); }
+});
+$('budget').addEventListener('change', e => { S.budget = e.target.value; save('budget'); renderBudget(); });
+
+function chipGroup(id, cb) {
+  const g = $(id);
+  g.addEventListener('click', e => {
+    const c = e.target.closest('.chip'); if (!c) return;
+    g.querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x === c));
+    cb(c.dataset.f);
+  });
+}
+chipGroup('recFilter', f => { recFilter = f; renderRec(); });
+chipGroup('clFilter', f => { clFilter = f; renderCheck(); });
+chipGroup('modeChips', f => { $('babyMode').hidden = f !== 'baby'; $('giftMode').hidden = f !== 'gift'; if (f === 'gift') renderGift(); });
+$('giftAge').addEventListener('change', renderGift);
+$('giftBudget').addEventListener('change', renderGift);
+
+$('logDate').value = ymd(new Date());
+$('logDate').addEventListener('change', renderLog);
+setInterval(() => { renderLog(); renderTodo(); }, 30000);
+
+$('gDate').value = ymd(new Date());
+$('gAdd').addEventListener('click', () => {
+  const date = $('gDate').value, h = parseFloat($('gH').value), w = parseFloat($('gW').value);
+  if (!date || (!h && !w)) return alert('날짜와 키 또는 몸무게를 입력해주세요');
+  S.growth = S.growth.filter(r => r.date !== date);
+  S.growth.push({ date, h: h || null, w: w || null });
+  save('growth'); $('gH').value = ''; $('gW').value = '';
+  renderGrowth(); renderSize();
+});
+
+$('recallGo').addEventListener('click', () => {
+  const q = $('recallQ').value.trim();
+  if (!q) return alert('제품명이나 브랜드를 입력해주세요');
+  window.open('https://search.naver.com/search.naver?query=' + encodeURIComponent(q + ' 리콜'), '_blank', 'noopener');
+});
+
+$('copyCode').addEventListener('click', async () => {
+  const code = toCode(exportData(false));
+  try { await navigator.clipboard.writeText(code); shareMsg('공유 코드를 복사했어요. 카톡 등으로 가족에게 보내주세요.'); }
+  catch { $('codeIn').value = code; shareMsg('아래 칸의 코드를 직접 복사해서 보내주세요.'); }
+});
+$('applyCode').addEventListener('click', () => {
+  try { if (importData(fromCode($('codeIn').value))) { shareMsg('불러왔어요!'); $('codeIn').value = ''; } }
+  catch { shareMsg('코드가 올바르지 않아요. 전체를 빠짐없이 붙여넣었는지 확인해주세요.'); }
+});
+$('saveBackup').addEventListener('click', () => {
+  const blob = new Blob([JSON.stringify(exportData(), null, 2)], { type: 'application/json' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = `아기랑준비물_백업_${ymd(new Date())}.json`; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  shareMsg('백업 파일을 저장했어요.');
+});
+$('loadBackup').addEventListener('change', async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try { if (importData(JSON.parse(await f.text()))) shareMsg('백업을 불러왔어요!'); }
+  catch { shareMsg('백업 파일을 읽을 수 없어요.'); }
+  e.target.value = '';
+});
+
+document.querySelectorAll('nav.tabs button').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('nav.tabs button').forEach(b => b.classList.toggle('on', b === btn));
+  document.querySelectorAll('section.tab').forEach(s => s.classList.toggle('on', s.id === 'tab-' + btn.dataset.tab));
+  window.scrollTo(0, 0);
+}));
+
+hydrateIcons(); syncInputs(); initGift(); renderTips(); renderClothBrands(); renderAll();
+
+// 설치형 앱(PWA): 인터넷 주소(https)로 열었을 때만 오프라인 저장 기능을 켜요
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>
